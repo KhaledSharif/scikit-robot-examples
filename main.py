@@ -36,6 +36,8 @@ def main():
     # Compute the joint angles for this step
     robot.inverse_kinematics(box, rotation_axis="y")
 
+    robot.open_hand(default_angle=np.deg2rad(15))
+
     # Print the joint angles for this step
     print(robot.angle_vector())
 
